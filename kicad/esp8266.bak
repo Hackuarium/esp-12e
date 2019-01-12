@@ -1,0 +1,153 @@
+EESchema Schematic File Version 4
+LIBS:esp8266-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1950 1500 1400 900 
+U 5C3A17E5
+F0 "MCP73831" 50
+F1 "MCP73831.sch" 50
+F2 "VIN" I L 1950 1750 50 
+F3 "VOUT" I R 3350 1750 50 
+F4 "STAT" I R 3350 2000 50 
+F5 "VOLT" I R 3350 2200 50 
+$EndSheet
+$Sheet
+S 4100 1750 950  550 
+U 5C3A2732
+F0 "MCP1703-33" 50
+F1 "mcp1703-33.sch" 50
+$EndSheet
+$Comp
+L RF_Module:ESP-12E U1
+U 1 1 5C3A364D
+P 3550 4450
+F 0 "U1" H 3550 5428 50  0000 C CNN
+F 1 "ESP-12E" H 3550 5337 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 3550 4450 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 3200 4550 50  0001 C CNN
+	1    3550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_LED:PCA9685PW U5
+U 1 1 5C3A3F73
+P 7600 5000
+F 0 "U5" H 7550 4900 50  0000 C CNN
+F 1 "PCA9685PW" H 7550 4800 50  0000 C CNN
+F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 7625 4025 50  0001 L CNN
+F 3 "http://www.nxp.com/documents/data_sheet/PCA9685.pdf" H 7200 5700 50  0001 C CNN
+	1    7600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ms5637:MS5637 U4
+U 1 1 5C3A4506
+P 7700 2950
+F 0 "U4" H 7700 3287 60  0000 C CNN
+F 1 "MS5637" H 7700 3181 60  0000 C CNN
+F 2 "" H 7400 2900 60  0001 C CNN
+F 3 "" H 7400 2900 60  0000 C CNN
+	1    7700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L lpatiny:BSP75 Q1
+U 1 1 5C3A4B25
+P 9300 3400
+F 0 "Q1" H 9506 3446 50  0000 L CNN
+F 1 "BSP75" H 9506 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9500 3325 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSP129-DS-v01_42-en.pdf?fileId=db3a30433c1a8752013c1fc296d2395f" H 9500 3475 50  0001 L CNN
+	1    9300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Humidity:Si7020-A20 U6
+U 1 1 5C3A5AF4
+P 7700 1900
+F 0 "U6" H 8141 1946 50  0000 L CNN
+F 1 "Si7020-A20" H 8141 1855 50  0000 L CNN
+F 2 "Package_DFN_QFN:DFN-6-1EP_3x3mm_P1mm_EP1.5x2.4mm" H 7700 1500 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si7020-A20.pdf" H 7500 2200 50  0001 C CNN
+	1    7700 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5200 6900 5300
+Wire Wire Line
+	6900 5300 6900 5400
+Connection ~ 6900 5300
+Wire Wire Line
+	6900 5400 6900 5500
+Connection ~ 6900 5400
+Wire Wire Line
+	6900 5500 6900 5600
+Connection ~ 6900 5500
+Wire Wire Line
+	6900 5600 6900 5700
+Connection ~ 6900 5600
+$Comp
+L power:GND #PWR0114
+U 1 1 5C3A62A4
+P 6900 5850
+F 0 "#PWR0114" H 6900 5600 50  0001 C CNN
+F 1 "GND" H 6905 5677 50  0000 C CNN
+F 2 "" H 6900 5850 50  0001 C CNN
+F 3 "" H 6900 5850 50  0001 C CNN
+	1    6900 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5700 6900 5850
+Connection ~ 6900 5700
+$Comp
+L power:GND #PWR0115
+U 1 1 5C3A6341
+P 7600 6250
+F 0 "#PWR0115" H 7600 6000 50  0001 C CNN
+F 1 "GND" H 7605 6077 50  0000 C CNN
+F 2 "" H 7600 6250 50  0001 C CNN
+F 3 "" H 7600 6250 50  0001 C CNN
+	1    7600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 6100 7600 6250
+$Comp
+L power:+3.3V #PWR0116
+U 1 1 5C3A641F
+P 7600 3850
+F 0 "#PWR0116" H 7600 3700 50  0001 C CNN
+F 1 "+3.3V" H 7615 4023 50  0000 C CNN
+F 2 "" H 7600 3850 50  0001 C CNN
+F 3 "" H 7600 3850 50  0001 C CNN
+	1    7600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3850 7600 4000
+$Comp
+L Connector:Conn_Coaxial_Power J2
+U 1 1 5C3A7497
+P 1050 1150
+F 0 "J2" H 1138 1146 50  0000 L CNN
+F 1 "Conn_Coaxial_Power" H 1138 1055 50  0000 L CNN
+F 2 "" H 1050 1100 50  0001 C CNN
+F 3 "~" H 1050 1100 50  0001 C CNN
+	1    1050 1150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
