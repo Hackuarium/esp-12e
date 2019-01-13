@@ -2,4 +2,5 @@
   (lib (name lpatiny)(type Legacy)(uri /home/lpatiny/git/test/esp/esp8266/lpatiny.lib)(options "")(descr ""))
   (lib (name DMP1045U)(type Legacy)(uri /home/lpatiny/Downloads/DMP1045U/DMP1045U.lib)(options "")(descr ""))
   (lib (name ms5637)(type Legacy)(uri /home/lpatiny/git/test/esp/esp8266/ms5637.lib)(options "")(descr ""))
+  (lib (name esp8266-rescue)(type Legacy)(uri ${KIPRJMOD}/esp8266-rescue.lib)(options "")(descr ""))
 )

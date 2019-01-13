@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -91,32 +91,14 @@ Wire Wire Line
 	5300 4300 5300 4400
 Wire Wire Line
 	5900 4300 5900 4400
-$Comp
-L power:VDD #PWR0112
-U 1 1 5C399B01
-P 4400 4000
-F 0 "#PWR0112" H 4400 3850 50  0001 C CNN
-F 1 "VDD" H 4417 4173 50  0000 C CNN
-F 2 "" H 4400 4000 50  0001 C CNN
-F 3 "" H 4400 4000 50  0001 C CNN
-	1    4400 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0113
-U 1 1 5C399B6B
-P 6650 4000
-F 0 "#PWR0113" H 6650 3850 50  0001 C CNN
-F 1 "+3.3V" H 6665 4173 50  0000 C CNN
-F 2 "" H 6650 4000 50  0001 C CNN
-F 3 "" H 6650 4000 50  0001 C CNN
-	1    6650 4000
-	1    0    0    -1  
-$EndComp
 Connection ~ 5900 4000
 Wire Wire Line
 	4650 4000 4400 4000
 Connection ~ 4650 4000
 Wire Wire Line
 	5900 4000 6650 4000
+Text HLabel 4400 4000 0    50   Input ~ 0
+VDD
+Text HLabel 6650 4000 2    50   Output ~ 0
+3.3V
 $EndSCHEMATC

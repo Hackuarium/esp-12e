@@ -82,7 +82,7 @@ F 3 "~" H 6650 2900 50  0001 C CNN
 $EndComp
 Text HLabel 4250 2500 0    50   Input ~ 0
 VIN
-Text HLabel 8850 2700 2    50   Input ~ 0
+Text HLabel 8850 2700 2    50   Output ~ 0
 VOUT
 Wire Wire Line
 	5300 2900 5150 2900
@@ -125,7 +125,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 3700 6200 3800
 Text HLabel 6100 3350 0    50   Input ~ 0
-STAT
+V_STATUS
 Wire Wire Line
 	6100 3350 6200 3350
 Connection ~ 6200 3350
@@ -147,7 +147,7 @@ L Device:R R6
 U 1 1 5C39A47A
 P 7550 3300
 F 0 "R6" H 7620 3346 50  0000 L CNN
-F 1 "1M" H 7620 3255 50  0000 L CNN
+F 1 "270k" H 7620 3255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7480 3300 50  0001 C CNN
 F 3 "~" H 7550 3300 50  0001 C CNN
 	1    7550 3300
@@ -186,8 +186,8 @@ F 3 "" H 7850 3550 50  0001 C CNN
 	1    7850 3550
 	1    0    0    -1  
 $EndComp
-Text HLabel 8050 3100 2    50   Input ~ 0
-VOLT
+Text HLabel 8050 3100 2    50   Output ~ 0
+V_PROBE
 Wire Wire Line
 	6100 2700 6650 2700
 Wire Wire Line
@@ -295,7 +295,7 @@ F 3 "~" H 7300 3000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6650 2700 7100 2700
+	6650 2700 6850 2700
 Connection ~ 6650 2700
 Wire Wire Line
 	7100 2900 7100 2700
@@ -350,5 +350,37 @@ VIN
 Wire Wire Line
 	7700 2350 7950 2350
 Connection ~ 7950 2350
-NoConn ~ 7250 2750
+$Comp
+L Connector:TestPoint_2Pole TP1
+U 1 1 5C3B9527
+P 8500 2900
+F 0 "TP1" V 8454 2958 50  0000 L CNN
+F 1 "TestPoint_2Pole" V 8545 2958 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 8500 2900 50  0001 C CNN
+F 3 "~" H 8500 2900 50  0001 C CNN
+	1    8500 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 5C3B95F4
+P 8500 3200
+F 0 "#PWR0121" H 8500 2950 50  0001 C CNN
+F 1 "GND" H 8505 3027 50  0000 C CNN
+F 2 "" H 8500 3200 50  0001 C CNN
+F 3 "" H 8500 3200 50  0001 C CNN
+	1    8500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3100 8500 3200
+Text HLabel 6950 2500 2    50   Output ~ 0
+VBAT
+Wire Wire Line
+	6850 2700 6850 2500
+Wire Wire Line
+	6850 2500 6950 2500
+Connection ~ 6850 2700
+Wire Wire Line
+	6850 2700 7100 2700
 $EndSCHEMATC
