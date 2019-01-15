@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -45,18 +45,7 @@ F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manua
 	1    0    0    -1  
 $EndComp
 $Comp
-L Driver_LED:PCA9685PW U5
-U 1 1 5C3A3F73
-P 7600 5000
-F 0 "U5" H 7550 4900 50  0000 C CNN
-F 1 "PCA9685PW" H 7550 4800 50  0000 C CNN
-F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 7625 4025 50  0001 L CNN
-F 3 "http://www.nxp.com/documents/data_sheet/PCA9685.pdf" H 7200 5700 50  0001 C CNN
-	1    7600 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L esp8266-rescue:MS5637-ms5637 U4
+L ms5637:MS5637 U4
 U 1 1 5C3A4506
 P 7700 2950
 F 0 "U4" H 7700 3287 60  0000 C CNN
@@ -67,7 +56,7 @@ F 3 "" H 7400 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L esp8266-rescue:BSP75-lpatiny Q1
+L BSP75:BSP75 Q1
 U 1 1 5C3A4B25
 P 9300 3400
 F 0 "Q1" H 9506 3446 50  0000 L CNN
@@ -88,60 +77,6 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si7020-A20.pdf" H 7500 
 	1    7700 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6900 5200 6900 5300
-Wire Wire Line
-	6900 5300 6900 5400
-Connection ~ 6900 5300
-Wire Wire Line
-	6900 5400 6900 5500
-Connection ~ 6900 5400
-Wire Wire Line
-	6900 5500 6900 5600
-Connection ~ 6900 5500
-Wire Wire Line
-	6900 5600 6900 5700
-Connection ~ 6900 5600
-$Comp
-L power:GND #PWR0114
-U 1 1 5C3A62A4
-P 6900 5850
-F 0 "#PWR0114" H 6900 5600 50  0001 C CNN
-F 1 "GND" H 6905 5677 50  0000 C CNN
-F 2 "" H 6900 5850 50  0001 C CNN
-F 3 "" H 6900 5850 50  0001 C CNN
-	1    6900 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 5700 6900 5850
-Connection ~ 6900 5700
-$Comp
-L power:GND #PWR0115
-U 1 1 5C3A6341
-P 7600 6250
-F 0 "#PWR0115" H 7600 6000 50  0001 C CNN
-F 1 "GND" H 7605 6077 50  0000 C CNN
-F 2 "" H 7600 6250 50  0001 C CNN
-F 3 "" H 7600 6250 50  0001 C CNN
-	1    7600 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7600 6100 7600 6250
-$Comp
-L power:+3.3V #PWR0116
-U 1 1 5C3A641F
-P 7600 3850
-F 0 "#PWR0116" H 7600 3700 50  0001 C CNN
-F 1 "+3.3V" H 7615 4023 50  0000 C CNN
-F 2 "" H 7600 3850 50  0001 C CNN
-F 3 "" H 7600 3850 50  0001 C CNN
-	1    7600 3850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7600 3850 7600 4000
 $Comp
 L Connector:Conn_Coaxial_Power J2
 U 1 1 5C3A7497
@@ -154,7 +89,7 @@ F 3 "~" H 1050 1100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L esp8266-rescue:BSP75-lpatiny Q2
+L BSP75:BSP75 Q2
 U 1 1 5C3A668F
 P 9250 4000
 F 0 "Q2" H 9456 4046 50  0000 L CNN
@@ -165,7 +100,7 @@ F 3 "https://www.infineon.com/dgdl/Infineon-BSP129-DS-v01_42-en.pdf?fileId=db3a3
 	1    0    0    -1  
 $EndComp
 $Comp
-L esp8266-rescue:BSP75-lpatiny Q3
+L BSP75:BSP75 Q3
 U 1 1 5C3A66DF
 P 9300 4700
 F 0 "Q3" H 9506 4746 50  0000 L CNN
@@ -176,7 +111,7 @@ F 3 "https://www.infineon.com/dgdl/Infineon-BSP129-DS-v01_42-en.pdf?fileId=db3a3
 	1    0    0    -1  
 $EndComp
 $Comp
-L esp8266-rescue:BSP75-lpatiny Q4
+L BSP75:BSP75 Q4
 U 1 1 5C3A6717
 P 9350 5350
 F 0 "Q4" H 9556 5396 50  0000 L CNN
@@ -283,7 +218,7 @@ L Switch:SW_Push SW1
 U 1 1 5C3B7657
 P 3500 4250
 F 0 "SW1" H 3500 4535 50  0000 C CNN
-F 1 "SW_Push" H 3500 4444 50  0000 C CNN
+F 1 "RESET" H 3500 4444 50  0000 C CNN
 F 2 "digikey-footprints:Switch_Tactile_SMD_6x6mm" H 3500 4450 50  0001 C CNN
 F 3 "" H 3500 4450 50  0001 C CNN
 	1    3500 4250
@@ -343,69 +278,60 @@ F 3 "~" V 1350 6625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW2
 U 1 1 5C3BA694
-P 5750 4250
-F 0 "SW?" H 5750 4535 50  0000 C CNN
-F 1 "SW_Push" H 5750 4444 50  0000 C CNN
-F 2 "digikey-footprints:Switch_Tactile_SMD_6x6mm" H 5750 4450 50  0001 C CNN
-F 3 "" H 5750 4450 50  0001 C CNN
-	1    5750 4250
+P 6200 4250
+F 0 "SW2" H 6200 4535 50  0000 C CNN
+F 1 "PROG" H 6200 4444 50  0000 C CNN
+F 2 "digikey-footprints:Switch_Tactile_SMD_6x6mm" H 6200 4450 50  0001 C CNN
+F 3 "" H 6200 4450 50  0001 C CNN
+	1    6200 4250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 5C3BA6FE
-P 6100 4050
-F 0 "R?" H 6170 4096 50  0000 L CNN
-F 1 "10k" H 6170 4005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6030 4050 50  0001 C CNN
-F 3 "~" H 6100 4050 50  0001 C CNN
-	1    6100 4050
+P 5750 4050
+F 0 "R10" H 5820 4096 50  0000 L CNN
+F 1 "10k" H 5820 4005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 4050 50  0001 C CNN
+F 3 "~" H 5750 4050 50  0001 C CNN
+	1    5750 4050
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0112
 U 1 1 5C3BA74E
-P 6100 3800
-F 0 "#PWR?" H 6100 3650 50  0001 C CNN
-F 1 "+3.3V" H 6115 3973 50  0000 C CNN
-F 2 "" H 6100 3800 50  0001 C CNN
-F 3 "" H 6100 3800 50  0001 C CNN
-	1    6100 3800
+P 5750 3800
+F 0 "#PWR0112" H 5750 3650 50  0001 C CNN
+F 1 "+3.3V" H 5765 3973 50  0000 C CNN
+F 2 "" H 5750 3800 50  0001 C CNN
+F 3 "" H 5750 3800 50  0001 C CNN
+	1    5750 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 3800 6100 3900
-Wire Wire Line
-	5550 4250 5250 4250
-Wire Wire Line
-	5950 4250 6100 4250
-Wire Wire Line
-	6100 4250 6100 4200
+	5750 3800 5750 3900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0113
 U 1 1 5C3BAE0C
-P 6350 4250
-F 0 "#PWR?" H 6350 4000 50  0001 C CNN
-F 1 "GND" H 6355 4077 50  0000 C CNN
-F 2 "" H 6350 4250 50  0001 C CNN
-F 3 "" H 6350 4250 50  0001 C CNN
-	1    6350 4250
+P 6500 4250
+F 0 "#PWR0113" H 6500 4000 50  0001 C CNN
+F 1 "GND" H 6505 4077 50  0000 C CNN
+F 2 "" H 6500 4250 50  0001 C CNN
+F 3 "" H 6500 4250 50  0001 C CNN
+	1    6500 4250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6100 4250 6350 4250
-Connection ~ 6100 4250
 Wire Wire Line
 	5600 4450 5250 4450
 Text Label 5300 4450 0    50   ~ 0
-Onewire
+IO2
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 5C3BB3E1
 P 5550 6200
-F 0 "R?" H 5620 6246 50  0000 L CNN
+F 0 "R9" H 5620 6246 50  0000 L CNN
 F 1 "4.7k" H 5620 6155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5480 6200 50  0001 C CNN
 F 3 "~" H 5550 6200 50  0001 C CNN
@@ -413,10 +339,10 @@ F 3 "~" H 5550 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0114
 U 1 1 5C3BB43D
 P 5550 5900
-F 0 "#PWR?" H 5550 5750 50  0001 C CNN
+F 0 "#PWR0114" H 5550 5750 50  0001 C CNN
 F 1 "+3.3V" H 5565 6073 50  0000 C CNN
 F 2 "" H 5550 5900 50  0001 C CNN
 F 3 "" H 5550 5900 50  0001 C CNN
@@ -431,21 +357,17 @@ Connection ~ 5550 6350
 Wire Wire Line
 	5550 5900 5550 6050
 Text Label 5200 6350 0    50   ~ 0
-Onewire
+IO2
 Wire Wire Line
 	3800 2200 3350 2200
-Wire Wire Line
-	3800 2000 3350 2000
 Text Label 3400 2200 0    50   ~ 0
-V_PROBE
-Text Label 3400 2000 0    50   ~ 0
-V_STATUS
+ADC
 Wire Wire Line
 	4050 4450 3700 4450
 Wire Wire Line
 	4050 4650 3700 4650
 Text Label 3700 4650 0    50   ~ 0
-V_PROBE
+ADC
 Wire Wire Line
 	5250 4650 5600 4650
 Wire Wire Line
@@ -463,10 +385,10 @@ Wire Wire Line
 Wire Wire Line
 	5450 1600 5900 1600
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0115
 U 1 1 5C3C20CE
 P 5900 1600
-F 0 "#PWR?" H 5900 1450 50  0001 C CNN
+F 0 "#PWR0115" H 5900 1450 50  0001 C CNN
 F 1 "+3.3V" H 5915 1773 50  0000 C CNN
 F 2 "" H 5900 1600 50  0001 C CNN
 F 3 "" H 5900 1600 50  0001 C CNN
@@ -474,10 +396,10 @@ F 3 "" H 5900 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0116
 U 1 1 5C3C29FF
 P 750 1150
-F 0 "#PWR?" H 750 900 50  0001 C CNN
+F 0 "#PWR0116" H 750 900 50  0001 C CNN
 F 1 "GND" H 755 977 50  0000 C CNN
 F 2 "" H 750 1150 50  0001 C CNN
 F 3 "" H 750 1150 50  0001 C CNN
@@ -487,10 +409,10 @@ $EndComp
 Wire Wire Line
 	750  1150 850  1150
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR0122
 U 1 1 5C3C31F1
 P 1300 1150
-F 0 "#PWR?" H 1300 1000 50  0001 C CNN
+F 0 "#PWR0122" H 1300 1000 50  0001 C CNN
 F 1 "+12V" H 1315 1323 50  0000 C CNN
 F 2 "" H 1300 1150 50  0001 C CNN
 F 3 "" H 1300 1150 50  0001 C CNN
@@ -500,23 +422,23 @@ $EndComp
 Wire Wire Line
 	1150 1150 1300 1150
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D3
 U 1 1 5C3C3EAF
 P 1500 1600
-F 0 "D?" H 1500 1384 50  0000 C CNN
+F 0 "D3" H 1500 1384 50  0000 C CNN
 F 1 "D_Schottky" H 1500 1475 50  0000 C CNN
-F 2 "" H 1500 1600 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 1500 1600 50  0001 C CNN
 F 3 "~" H 1500 1600 50  0001 C CNN
 	1    1500 1600
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D4
 U 1 1 5C3C3FE5
 P 1500 1900
-F 0 "D?" H 1500 1684 50  0000 C CNN
+F 0 "D4" H 1500 1684 50  0000 C CNN
 F 1 "D_Schottky" H 1500 1775 50  0000 C CNN
-F 2 "" H 1500 1900 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 1500 1900 50  0001 C CNN
 F 3 "~" H 1500 1900 50  0001 C CNN
 	1    1500 1900
 	-1   0    0    1   
@@ -537,10 +459,10 @@ VCC_FTDI
 Wire Wire Line
 	850  1600 1350 1600
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0123
 U 1 1 5C3C86F3
 P 4650 3850
-F 0 "#PWR?" H 4650 3700 50  0001 C CNN
+F 0 "#PWR0123" H 4650 3700 50  0001 C CNN
 F 1 "+3.3V" H 4665 4023 50  0000 C CNN
 F 2 "" H 4650 3850 50  0001 C CNN
 F 3 "" H 4650 3850 50  0001 C CNN
@@ -549,4 +471,151 @@ F 3 "" H 4650 3850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4650 3850 4650 4050
+$Comp
+L Device:R R8
+U 1 1 5C3CA31A
+P 2950 5050
+F 0 "R8" H 3020 5096 50  0000 L CNN
+F 1 "10k" H 3020 5005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2880 5050 50  0001 C CNN
+F 3 "~" H 2950 5050 50  0001 C CNN
+	1    2950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0124
+U 1 1 5C3CA37E
+P 2950 4800
+F 0 "#PWR0124" H 2950 4650 50  0001 C CNN
+F 1 "+3.3V" H 2965 4973 50  0000 C CNN
+F 2 "" H 2950 4800 50  0001 C CNN
+F 3 "" H 2950 4800 50  0001 C CNN
+	1    2950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5200 2950 5400
+Wire Wire Line
+	2950 4800 2950 4900
+Text Label 2950 5300 0    50   ~ 0
+EN
+Text Label 3750 4450 0    50   ~ 0
+EN
+Text Label 3750 4250 0    50   ~ 0
+RST
+Wire Wire Line
+	5250 5250 5600 5250
+Text Label 5300 5250 0    50   ~ 0
+RST
+Text Notes 4000 5400 1    50   ~ 0
+USED BY FLASH
+Wire Wire Line
+	5250 4850 5600 4850
+Wire Wire Line
+	5250 4950 5600 4950
+Wire Wire Line
+	5250 5050 5600 5050
+Wire Wire Line
+	5250 5150 5600 5150
+Text Label 5300 4850 0    50   ~ 0
+PWM_R
+Text Notes 5650 4450 0    50   ~ 0
+Onewire\n
+$Sheet
+S 4500 2150 950  550 
+U 5C3D1997
+F0 "MCP1703-50" 50
+F1 "mcp1703-50.sch" 50
+$EndSheet
+$Comp
+L power:GND #PWR0128
+U 1 1 5C3D4B6C
+P 10500 2100
+F 0 "#PWR0128" H 10500 1850 50  0001 C CNN
+F 1 "GND" H 10505 1927 50  0000 C CNN
+F 2 "" H 10500 2100 50  0001 C CNN
+F 3 "" H 10500 2100 50  0001 C CNN
+	1    10500 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0129
+U 1 1 5C3D5BDB
+P 10500 2000
+F 0 "#PWR0129" H 10500 1850 50  0001 C CNN
+F 1 "+3.3V" H 10515 2173 50  0000 C CNN
+F 2 "" H 10500 2000 50  0001 C CNN
+F 3 "" H 10500 2000 50  0001 C CNN
+	1    10500 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2000 10500 2000
+Wire Wire Line
+	10500 2100 10150 2100
+Wire Wire Line
+	10150 2300 10400 2300
+Text Label 10200 2300 0    50   ~ 0
+IO2
+$Comp
+L Onewire:Onewire J6
+U 1 1 5C3ECA0A
+P 9950 2100
+F 0 "J6" H 9930 2425 50  0000 C CNN
+F 1 "Onewire" H 9930 2334 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 9950 2100 50  0001 C CNN
+F 3 "~" H 9950 2100 50  0001 C CNN
+	1    9950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 5C3EE93A
+P 10500 1050
+F 0 "#PWR0130" H 10500 800 50  0001 C CNN
+F 1 "GND" H 10505 877 50  0000 C CNN
+F 2 "" H 10500 1050 50  0001 C CNN
+F 3 "" H 10500 1050 50  0001 C CNN
+	1    10500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0131
+U 1 1 5C3EE940
+P 10500 950
+F 0 "#PWR0131" H 10500 800 50  0001 C CNN
+F 1 "+3.3V" H 10515 1123 50  0000 C CNN
+F 2 "" H 10500 950 50  0001 C CNN
+F 3 "" H 10500 950 50  0001 C CNN
+	1    10500 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 950  10500 950 
+Wire Wire Line
+	10500 1050 10150 1050
+Wire Wire Line
+	10150 1250 10400 1250
+Text Label 10200 1250 0    50   ~ 0
+IO2
+$Comp
+L Onewire:Onewire J7
+U 1 1 5C3EE94A
+P 9950 1050
+F 0 "J7" H 9930 1375 50  0000 C CNN
+F 1 "Onewire" H 9930 1284 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 9950 1050 50  0001 C CNN
+F 3 "~" H 9950 1050 50  0001 C CNN
+	1    9950 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4250 6500 4250
+Wire Wire Line
+	5250 4250 5750 4250
+Wire Wire Line
+	5750 4200 5750 4250
+Connection ~ 5750 4250
+Wire Wire Line
+	5750 4250 6000 4250
 $EndSCHEMATC

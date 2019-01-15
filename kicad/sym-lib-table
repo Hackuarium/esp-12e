@@ -1,6 +1,7 @@
 (sym_lib_table
-  (lib (name lpatiny)(type Legacy)(uri /home/lpatiny/git/test/esp/esp8266/lpatiny.lib)(options "")(descr ""))
-  (lib (name DMP1045U)(type Legacy)(uri /home/lpatiny/Downloads/DMP1045U/DMP1045U.lib)(options "")(descr ""))
-  (lib (name ms5637)(type Legacy)(uri /home/lpatiny/git/test/esp/esp8266/ms5637.lib)(options "")(descr ""))
+  (lib (name BSP75)(type Legacy)(uri ${KIPRJMOD}/libs/BSP75.lib)(options "")(descr ""))
+  (lib (name ms5637)(type Legacy)(uri ${KIPRJMOD}/libs/ms5637.lib)(options "")(descr ""))
+  (lib (name Si7021-A20)(type Legacy)(uri ${KIPRJMOD}/libs/Si7021-A20.lib)(options "")(descr ""))
   (lib (name esp8266-rescue)(type Legacy)(uri ${KIPRJMOD}/esp8266-rescue.lib)(options "")(descr ""))
+  (lib (name Onewire)(type Legacy)(uri /home/lpatiny/git/hackuarium/esp-12e/kicad/libs/Onewire.lib)(options "")(descr ""))
 )
