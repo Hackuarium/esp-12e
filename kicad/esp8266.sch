@@ -50,7 +50,7 @@ U 1 1 5C3A4506
 P 7700 2950
 F 0 "U4" H 7700 3287 60  0000 C CNN
 F 1 "MS5637" H 7700 3181 60  0000 C CNN
-F 2 "" H 7400 2900 60  0001 C CNN
+F 2 "libs:MS5637" H 7400 2900 60  0001 C CNN
 F 3 "" H 7400 2900 60  0000 C CNN
 	1    7700 2950
 	1    0    0    -1  
@@ -146,7 +146,7 @@ F 3 "" H 1750 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1600 4350 0    50   ~ 0
-VCC-FTDI
+VCC_FTDI
 Wire Wire Line
 	1500 4050 1950 4050
 Wire Wire Line
@@ -517,8 +517,6 @@ Wire Wire Line
 	5250 5050 5600 5050
 Wire Wire Line
 	5250 5150 5600 5150
-Text Label 5300 4850 0    50   ~ 0
-PWM_R
 Text Notes 5650 4450 0    50   ~ 0
 Onewire\n
 $Sheet
@@ -618,4 +616,23 @@ Wire Wire Line
 Connection ~ 5750 4250
 Wire Wire Line
 	5750 4250 6000 4250
+Text Label 5300 4950 0    50   ~ 0
+IO13
+Text Label 5300 5050 0    50   ~ 0
+IO14
+Text Label 5300 5150 0    50   ~ 0
+IO15
+Text Label 5300 4850 0    50   ~ 0
+IO12
+$Comp
+L Sensor_Temperature:DS18B20 U7
+U 1 1 5C3F9182
+P 10000 2950
+F 0 "U7" H 9770 2996 50  0000 R CNN
+F 1 "DS18B20" H 9770 2905 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9000 2700 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 9850 3200 50  0001 C CNN
+	1    10000 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
