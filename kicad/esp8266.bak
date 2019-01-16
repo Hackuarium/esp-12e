@@ -50,7 +50,7 @@ U 1 1 5C3A4506
 P 7700 2950
 F 0 "U4" H 7700 3287 60  0000 C CNN
 F 1 "MS5637" H 7700 3181 60  0000 C CNN
-F 2 "" H 7400 2900 60  0001 C CNN
+F 2 "libs:MS5637" H 7400 2900 60  0001 C CNN
 F 3 "" H 7400 2900 60  0000 C CNN
 	1    7700 2950
 	1    0    0    -1  
@@ -58,12 +58,12 @@ $EndComp
 $Comp
 L BSP75:BSP75 Q1
 U 1 1 5C3A4B25
-P 9300 3400
-F 0 "Q1" H 9506 3446 50  0000 L CNN
-F 1 "BSP75" H 9506 3355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9500 3325 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/Infineon-BSP129-DS-v01_42-en.pdf?fileId=db3a30433c1a8752013c1fc296d2395f" H 9500 3475 50  0001 L CNN
-	1    9300 3400
+P 9050 3400
+F 0 "Q1" H 9256 3446 50  0000 L CNN
+F 1 "BSP75" H 9256 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9250 3325 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSP129-DS-v01_42-en.pdf?fileId=db3a30433c1a8752013c1fc296d2395f" H 9250 3475 50  0001 L CNN
+	1    9050 3400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -146,7 +146,7 @@ F 3 "" H 1750 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1600 4350 0    50   ~ 0
-VCC-FTDI
+VCC_FTDI
 Wire Wire Line
 	1500 4050 1950 4050
 Wire Wire Line
@@ -517,8 +517,6 @@ Wire Wire Line
 	5250 5050 5600 5050
 Wire Wire Line
 	5250 5150 5600 5150
-Text Label 5300 4850 0    50   ~ 0
-PWM_R
 Text Notes 5650 4450 0    50   ~ 0
 Onewire\n
 $Sheet
@@ -618,4 +616,53 @@ Wire Wire Line
 Connection ~ 5750 4250
 Wire Wire Line
 	5750 4250 6000 4250
+Text Label 5300 4950 0    50   ~ 0
+IO13
+Text Label 5300 5050 0    50   ~ 0
+IO14
+Text Label 5300 5150 0    50   ~ 0
+IO15
+Text Label 5300 4850 0    50   ~ 0
+IO12
+$Comp
+L Sensor_Temperature:DS18B20 U7
+U 1 1 5C3F9182
+P 10000 2950
+F 0 "U7" H 9770 2996 50  0000 R CNN
+F 1 "DS18B20" H 9770 2905 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9000 2700 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 9850 3200 50  0001 C CNN
+	1    10000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3FE6C9
+P 9150 3650
+F 0 "#PWR?" H 9150 3400 50  0001 C CNN
+F 1 "GND" H 9155 3477 50  0000 C CNN
+F 2 "" H 9150 3650 50  0001 C CNN
+F 3 "" H 9150 3650 50  0001 C CNN
+	1    9150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3650 9150 3600
+Wire Wire Line
+	8850 3400 8650 3400
+Text Label 8700 3400 0    50   ~ 0
+IO12
+$Comp
+L power:+12V #PWR?
+U 1 1 5C4005E5
+P 9150 3100
+F 0 "#PWR?" H 9150 2950 50  0001 C CNN
+F 1 "+12V" H 9165 3273 50  0000 C CNN
+F 2 "" H 9150 3100 50  0001 C CNN
+F 3 "" H 9150 3100 50  0001 C CNN
+	1    9150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3100 9150 3200
 $EndSCHEMATC
