@@ -95,10 +95,10 @@ Connection ~ 5900 4000
 Wire Wire Line
 	4650 4000 4400 4000
 Connection ~ 4650 4000
-Wire Wire Line
-	5900 4000 6650 4000
 Text HLabel 4400 4000 0    50   Input ~ 0
 VDD
 Text HLabel 6650 4000 2    50   Output ~ 0
 3.3V
+Wire Wire Line
+	5900 4000 6650 4000
 $EndSCHEMATC

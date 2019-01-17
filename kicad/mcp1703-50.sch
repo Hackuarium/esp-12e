@@ -84,12 +84,10 @@ Connection ~ 5900 4000
 Wire Wire Line
 	4650 4000 4400 4000
 Connection ~ 4650 4000
-Wire Wire Line
-	5900 4000 6650 4000
 Text HLabel 4400 4000 0    50   Input ~ 0
 VDD
 Text HLabel 6650 4000 2    50   Output ~ 0
-3.3V
+5.0V
 $Comp
 L Regulator_Linear:MCP1703A-5002_SOT23 U5
 U 1 1 5C3D1B9E
@@ -101,4 +99,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 5300 3950 
 	1    5300 4000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5900 4000 6650 4000
 $EndSCHEMATC
