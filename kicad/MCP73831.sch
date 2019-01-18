@@ -357,4 +357,6 @@ Wire Wire Line
 Connection ~ 6850 2700
 Wire Wire Line
 	6850 2700 7100 2700
+Text HLabel 8050 3100 2    50   Output ~ 0
+V_PROBE
 $EndSCHEMATC

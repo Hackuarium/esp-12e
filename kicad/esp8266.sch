@@ -1243,7 +1243,7 @@ U 1 1 5C4D4A7A
 P 7100 5650
 F 0 "TP2" H 7016 5975 50  0000 C CNN
 F 1 "Test_i2C" H 7016 5884 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7150 5850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7150 5850 50  0001 C CNN
 F 3 "~" H 7150 5850 50  0001 C CNN
 	1    7100 5650
 	1    0    0    -1  

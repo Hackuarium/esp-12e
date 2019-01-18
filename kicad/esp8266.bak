@@ -358,7 +358,7 @@ Wire Wire Line
 	9000 1250 9000 1400
 Text Label 8650 1700 0    50   ~ 0
 IO2
-Text Label 4750 2250 0    50   ~ 0
+Text Label 4950 2250 0    50   ~ 0
 ADC
 Wire Wire Line
 	4050 4450 3700 4450
@@ -1238,21 +1238,21 @@ Wire Wire Line
 Text Label 10450 2700 0    50   ~ 0
 IO2
 $Comp
-L Test_points:Test_i2C TP?
+L Test_points:Test_i2C TP2
 U 1 1 5C4D4A7A
 P 7100 5650
-F 0 "TP?" H 7016 5975 50  0000 C CNN
+F 0 "TP2" H 7016 5975 50  0000 C CNN
 F 1 "Test_i2C" H 7016 5884 50  0000 C CNN
-F 2 "" H 7150 5850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7150 5850 50  0001 C CNN
 F 3 "~" H 7150 5850 50  0001 C CNN
 	1    7100 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0160
 U 1 1 5C4D4B30
 P 7300 5750
-F 0 "#PWR?" H 7300 5500 50  0001 C CNN
+F 0 "#PWR0160" H 7300 5500 50  0001 C CNN
 F 1 "GND" H 7305 5577 50  0000 C CNN
 F 2 "" H 7300 5750 50  0001 C CNN
 F 3 "" H 7300 5750 50  0001 C CNN
