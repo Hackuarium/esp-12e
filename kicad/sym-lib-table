@@ -6,4 +6,5 @@
   (lib (name Onewire)(type Legacy)(uri /home/lpatiny/git/hackuarium/esp-12e/kicad/libs/Onewire.lib)(options "")(descr ""))
   (lib (name rj12)(type Legacy)(uri /home/lpatiny/git/hackuarium/esp-12e/kicad/libs/rj12.lib)(options "")(descr ""))
   (lib (name Test_points)(type Legacy)(uri /home/lpatiny/git/hackuarium/esp-12e/kicad/libs/Test_points.lib)(options "")(descr ""))
+  (lib (name hackuarium)(type Legacy)(uri ${KIPRJMOD}/libs/hackuarium.lib)(options "")(descr ""))
 )
