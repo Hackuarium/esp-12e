@@ -1488,4 +1488,8 @@ NoConn ~ 1000 2750
 NoConn ~ 1000 2900
 NoConn ~ 1000 3050
 NoConn ~ 1000 3200
+Text Notes 7400 7500 0    50   ~ 0
+ESP-12e playground
+Text Notes 8150 7650 0    50   ~ 0
+18.01.2019
 $EndSCHEMATC
