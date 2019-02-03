@@ -317,7 +317,7 @@ U 1 1 5C39EFFF
 P 8050 2700
 F 0 "D2" V 8248 2700 50  0000 C CNN
 F 1 "DMP1045U" V 8339 2700 50  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 8050 2700 50  0001 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8050 2700 50  0001 L BNN
 F 3 "MOSFET, P CH, W ESD, 12V, SOT23; Transistor Polarity: P Channel; Continuous Drain Current Id: 5.2A; Drain Source Volt..." H 8050 2700 50  0001 L BNN
 F 4 "Unavailable" H 8050 2700 50  0001 L BNN "Field4"
 F 5 "None" H 8050 2700 50  0001 L BNN "Field5"

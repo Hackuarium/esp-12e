@@ -50,7 +50,7 @@ Programming from the arduino a nodeMcu
 - RGBW
 - PCA9685 + 4 x BSP75
 - WS2812 : addressable led
-- Luminosity: TSC3400 or VEML6040 or VEML7700
+- Luminosity: TCS3400 or VEML6040 or VEML7700
 - Pressure: MS5637
 - Humidity / Temperature: ChipCAP2 or Si7021
 - Power monitoring
