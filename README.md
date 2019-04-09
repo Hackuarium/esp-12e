@@ -32,7 +32,7 @@ PWM: R12 G15 B13
 ADC: TOUT
 I2C: SCL14 SDA2
 
-[docs/esp12e-pinout.png]
+<img src="docs/esp12e-pinout.png">
 
 Flashing board ?
 
