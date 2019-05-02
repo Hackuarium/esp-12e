@@ -48,6 +48,9 @@ You need to maintain `SW2` while pressing `SW1` (reset) in order to set the ESP-
 - https://www.instructables.com/id/Quick-Start-to-Nodemcu-ESP8266-on-Arduino-IDE/
 - https://www.instructables.com/id/ESP8266-controlling-Neopixel-LEDs-using-Arduino-ID/
 
+## MQTT+Node-RED
+https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/
+
 ## FreeRTOS
 
 It seems impossible to program the ESP-12E with RTOS from the Arduino IDE.
