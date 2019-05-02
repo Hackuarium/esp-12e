@@ -49,8 +49,11 @@ You need to maintain `SW2` while pressing `SW1` (reset) in order to set the ESP-
 - https://www.instructables.com/id/ESP8266-controlling-Neopixel-LEDs-using-Arduino-ID/
 
 ## MQTT+Node-RED
+
 https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/
+
 With SSL (secure)? :
+
 https://medium.com/@flespi/how-to-connect-esp8266-to-secure-mqtt-broker-know-it-all-and-get-it-done-approach-c33b94f37d88
 
 ## FreeRTOS
