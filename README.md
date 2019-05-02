@@ -56,7 +56,7 @@ With SSL (secure)? :
 
 https://medium.com/@flespi/how-to-connect-esp8266-to-secure-mqtt-broker-know-it-all-and-get-it-done-approach-c33b94f37d88
 
-https://hackaday.io/project/163666-secure-esp8266-mqtt-poc
+https://hackaday.io/project/163666-secure-esp8266-mqtt-poc/log/158992-secure-mqtt-broker-setup
 
 ## FreeRTOS
 
